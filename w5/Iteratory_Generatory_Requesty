@@ -1,0 +1,4 @@
+Po generatorach można przechodzić tylko raz!
+
+Yield coś	->	zwraca wartość do tego, kto zapytał; zapamiętuje swój stan pomiędzy wywołaniami
+

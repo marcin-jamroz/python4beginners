@@ -1,0 +1,75 @@
+			FUNKCJE
+
+def hello():
+	print("Hello world!")
+
+>>> hello()
+
+def - stworzenie definicji funkcji
+nazwa
+() - argumenty funkcji 
+:
+body funkcji
+
+
+
+zmienne globalne i lokalne, np. w funkcjach, przestrzenie nazw
+Do zmiany globalnej zmiennej w funkcji słowo "global"
+
+argumenty mutable:
+
+def func(a):
+	for x in a:
+		print(x)
+>>> func([1,5,3])
+
+Z wnętrza funkcji możemy modyfikować obiekty typu mutable
+
+
+argumenty funkcji:
+można przypisywać wartości konkretnym argumentow w wywołaniu funkcji, np.:
+f(a=1, b=2, c=3)
+f(1, 5, a=2)
+Najpierw argumenty pozycyjnie, potem przypisania, każdemu jedna wartość 
+
+
+domyślne argumenty:
+w definicji funkcji dodajemy domyślną wartość argumentu, np.
+
+def f(a, b=5):
+	print(a, b)
+
+tworzone obiekty argumentów domyślnych podczas czytania definicji funkcji przez interpreter, dlatego potem możemy zmieniać ten argument i zostaje on zmieniony dla każdego następnego wywołąnia 
+
+
+wartość zwracana w funkcji przez "return", kod funkcji kończy się na "return", domyślnie funkcja zwraca None
+
+
+Można przekazywać do funkcji wiele argumentów pozycyjnych, niekoniecznie znając wcześniej ich ilość, znak kluczowy "*" przed argumentem, jest to wtedy tupla, po której możemy iuterować
+
+Można przekazywać argumenty nazwane, znak kluczowy "**", co tworzy ich słownik
+
+Dodanie normalnego argumentu najpierw sprawia, że pierwszy podany argument będzie do niej przypisany, a potem już "*" i "**"
+
+
+Funkcja to obiekt, można na niej robić operacje właściwe dla obiektu, eg. przypisywać, zmieniać atrybuty itp. Jest obiektem niezmiennym, czyli można dodawać np. do słowników
+
+Można dodawać opisy funkcji: """ opis """, tak zwany docstring
+
+Funkcje rekurencyjne, domyślnie maksymalne zagnieżdżenie to 1000
+
+
+
+
+IMPORTY
+
+Importujemy poprzez słówko "import <nazwa>", potem odwołanie poprzez tą nazwę.
+Można również tylko wybrane coś imporotować: "from <nazwa> import <coś>", potem przez <coś> się odwołujemy
+
+Zabezpieczenie przed wykonywaniem kodu, który jest importowany:
+	if __name__ == "__main__":
+		print("coś")
+ten kod się wywoła, gdy opalamy konkretnie ten plik, w przypadku importu tak nie będzie
+
+Importowanie pakietów: 
+	from  <pakiet>.<nazwa> import <coś>

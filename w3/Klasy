@@ -1,0 +1,50 @@
+				KLASY
+
+Wszystkie metody i pola klas są publiczne. (wszystko w Python)
+Funkcje są wirtualne, rozwiązywane w runtime. 
+
+Brak polimorfizmu, w sensie stricte.
+Duck typing
+Python jest kompilowalny do bytecode'u, ale w locie. Podpada pod to scope, czyli mogą się dziać ciekawe rzeczy. Zmienne szukane LEGB (Local, Enclosing, Global, Built-in)!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+class MyFirst():
+	def __init__(self, name, surname)
+		sellf.name = name
+		self.surname = surname
+
+pierwszy = MyFirst()
+
+Klasy są wywoływane, są obiektami.
+
+Atrybut.coś
+
+
+Python ma jeden konstruktor "new". __init__ jest uruchamiany automatycznie, razem z przekazaniem argumentu "self". Musi on być przekazany jako pierwszy argument w każdej metodzie.
+
+Instancja potrafi tylko odwoływać się do atrybutów. Instancja jest obiektem. Atrybuty najpierw są wyszukiwane w instancji, a potem w klasie. Nie ma modyfikatorów dostępu, wszystko jest publiczne.
+
+_zmienna	-> 	zmienna prywatna (podkreślnik)
+__zmienna	-> 	pseudoprywatność, "bardziej" prywatne, ale lepiej nie używać 
+
+Atrybuty klasy - współdzielone z instancjami, definiowanie w klasie
+Atrybuty instancji - tylko instancji, definiowane w __init__ najlepiej
+
+
+Dziedziczenie:
+
+class A():
+	pass
+
+class B(A):
+	pass
+
+
+Każda klasa dziedziczy po Object().
+
+Można odwoływać się do nadklasy poprzez super()
+
+
+len(obiekt) woła funkcję obiekt.len(). 
+Na naszych klasach możęmy zdefiniować funkcję __len__, żeby mogła być zwracana długość obiektu.

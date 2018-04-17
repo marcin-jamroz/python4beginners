@@ -1,0 +1,7 @@
+				Praca z plikami 
+
+1. with open(coś, mode) as f:
+	kod na pliku
+
+
+with - woła metodę enter, oplata metodę ContextManager'em, jest implementacja metody zamykającej, która jest wołana autmatycznie w przypadku błędu itp, należy stosować!!! Nie stosujemy wtedy f.close()
